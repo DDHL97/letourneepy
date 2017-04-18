@@ -1,0 +1,13 @@
+$def with (post, form)
+
+<h1>Editar $form.d.name</h1>
+
+<form action="" method="post" enctype="multipart/form-data">
+$:form.render()
+</form>
+
+
+<h3>Eliminar Usuario</h3>
+<form action="/delete/$post.id_user" method="post">
+    <input type="submit" value="Eliminar" onclick="return confirmar()" class="btn btn-sm btn-danger"/>
+</form>

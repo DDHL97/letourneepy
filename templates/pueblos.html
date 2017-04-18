@@ -1,0 +1,29 @@
+$def with (pueblos)
+
+
+ 
+        <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="/newpueblo">Nuevo Pueblo</a></li>        
+            </ul>
+        </div>
+<div class="navbar-wrapper">
+<h1>Lista de Pueblos Magicos</h1>
+<table class="table table-striped">
+   
+    <thead>
+    <th>Pueblos Magicos</th>
+    <th>Modificar</th>
+    <th>Borrar</th>
+    </thead>
+    <tbody>    
+    <tr>
+        $for pueblo in pueblos:
+        <td><a href="/viewpueblo/$pueblo.id_pueblo" class="btn btn-link">$pueblo.nom_pueblo</a> </td>
+        <td><a href="/editpueblo/$pueblo.id_pueblo" class="btn btn-info">Editar</a></td>
+        <!-- <td><a href="/borrar/$pueblo.id_pueblo" class="btn btn-info">Eliminar</a></td> -->
+        </tr>
+        
+    </tbody>
+    </table>
+ </div>

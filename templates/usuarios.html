@@ -1,0 +1,21 @@
+$def with (posts)
+<div class="navbar-wrapper">
+<h1>Lista de Usuarios</h1>
+<table class="table table-striped">
+   
+    <thead>
+    <th>Usuarios</th>
+    <th>Modificar</th>
+    <th>Borrar</th>
+    </thead>
+    <tbody>    
+    <tr>
+        $for post in posts:
+        <td><a href="/view/$post.id_user" class="btn btn-link">$post.name</a> </td>
+        <td><a href="/edit/$post.id_user" class="btn btn-info">Editar</a></td>
+        <td><a href="/borrar/$post.id_user" class="btn btn-info">Eliminar</td>
+        </tr>
+        
+    </tbody>
+    </table>
+ </div>

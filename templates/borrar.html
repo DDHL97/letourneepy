@@ -1,0 +1,19 @@
+$def with (post)
+
+<h1>Eliminar el siguiente Usuario:</h1>
+<br/>
+<br/>
+<br/>
+<h2>$post.name</h2>
+Nombre: $post.ap_paterno<br/>
+Apellido Paterno: $post.ap_materno<br/>
+Apellido Materno: $post.account_name<br/>
+Edad: $post.age<br/>
+Email: $post.email<br/>
+Contraseña: $post.password<br/>
+Imagen de perfil: <br/>
+<img src="../static/images/$post.imagen_usuario">
+
+<form action="/delete/$post.id_user" method="post" >
+    <input type="submit" value="Eliminar usuario" onclick="return confirmar()" class="btn btn-warning"/>
+</form>
